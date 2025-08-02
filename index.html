@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script language="javascript" src="tracery.js"></script>
+  <script language="javascript" src="grammar.js"></script>
+  <script language="javascript" src="mod-eng-basic.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <div class="top">
+    <h2>last river</h2>
+<button class="button glow-button" onclick="generate()">(new river)</button>
+ 
+   
+
+
+
+  <div id="poem" class="layer2"></div>
+
+  
+ </div>
+  
+  
+  
+<script>
+  var grammar = tracery.createGrammar(source);
+  var usedWords = new Set();
+  var poemContainer;
+
+  function generatePoem() {
+    usedWords.clear();
+    poemContainer = document.getElementById("poem");
+    poemContainer.innerHTML = "";
+
+    var result = grammar.flatten("#origin#");
+    var lines = result.split(/<br\s*\/?>/); // Split on <br> tags
+
+    let i = 0;
+    function generateNextLine() {
+      if (i < lines.length) {
+        var formattedLine = lines[i].replace(/(<[^>]+>)|([^<>\s])/g, (match, tag, char) => 
+          tag ? tag : `<span class="glow">${char}</span>`
+        );
+
+        var lineElement = document.createElement("div");
+        lineElement.innerHTML = formattedLine;
+        lineElement.classList.add("fade-in");
+        poemContainer.appendChild(lineElement);
+
+        i++;
+        setTimeout(generateNextLine, 1000);
+      }
+    }
+    generateNextLine();
+  }
+
+  window.onload = generatePoem;
+</script>
+
+</body>
+
+</html>
