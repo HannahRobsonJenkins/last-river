@@ -6,16 +6,29 @@ var source =
 
 
   {
-origin: ["#river1#","#river2#"],
+origin: ["#river1#","#river2#", "#river3#"],
 
 river1: [
-  "#anoun1#<br>#constructs1#<br>#structure1#<br>#s8#of<br>#adjective1#<br>#nouns1#<br>#s13#⑊<br>#middlechoice1#<br>#s19#⑊<br>#etre1#<br>#constructing1#<br>#machine1#<br>#preplocation1#<br>#s25#that<br>#s25#can<br>#end1#<br>#s30#⑊",
+  "#open1#<br>#constructs1#<br>#structure1#<br>#of1#<br>#adjective1#<br>#nouns1#<br>#slash1a#<br>#middle1#<br>#slash1b#<br>#etre1#<br>#constructing1#<br>#machine1#<br>#preplocation1#<br>#that1#<br>#can1#<br>#end1#<br>#slash1c#",
 ],
     river2: [
-  "#anoun2#<br>#constructs2#<br>#structure2#<br>#s18#of<br>#adjective2#<br>#nouns2#<br>#s24#⑊<br>#middlechoice2#<br>#s25#⑊<br>#etre2#<br>#constructing2#<br>#machine2#<br>#preplocation2#<br>#s25#that<br>#s22#can<br>#end2#<br>#s18#⑊",
+  "#open2#<br>#constructs2#<br>#structure2#<br>#of2#<br>#adjective2#<br>#nouns2#<br>#slash2a#<br>#middle2#<br>#slash2b#<br>#etre2#<br>#constructing2#<br>#machine2#<br>#preplocation2#<br>#that2#<br>#can2#<br>#end2#<br>",#slash2c#
 ],
+        river3: [
+  "#open3#<br>#constructs3#<br>#structure3#<br>#of3#<br>#adjective3#<br>#nouns3#<br>#slash3a#<br>#middle3#<br>#slash3b#<br>#etre3#<br>#constructing3#<br>#machine3#<br>#preplocation3#<br>#that3#<br>#can3#<br>#end3#<br>",#slash3c#
+],
+
+
+    middle1: ["#middle11#", "#middle21#"],
+middle11: [
+  "#every1#<br>#stone1#<br>#s17#of<br>#abstractnoun1#<br>#s16#has<br>#verbed1#<br>#collapse1#<br>",
+],
+middle21: [
+  "#soon1#<br>#pronoun1#<br>#s12#will<br>#miss1#<br>#s10#the<br>#adjective1#<br>#seasonalnoun1#",
+],
+
     
-    middlechoice2: ["#middle12#", "#middle22#"],
+    middle2: ["#middle12#", "#middle22#"],
 middle12: [
   "#every2#<br>#stone2#<br>#s22#of<br>#abstractnoun2#<br>#s16#has<br>#verbed2#<br>#collapse2#<br>",
 ],
@@ -23,7 +36,16 @@ middle22: [
   "#soon2#<br>#pronoun2#<br>#s23#will<br>#miss2#<br>#s20#the<br>#adjective2#<br>#seasonalnoun2#",
 ],
 
-anoun2: [
+    open1: [
+  "#s5#a<br>#s4#child",
+  "#s5#the<br>#s4#wind",
+  "#s5#my<br>#s4#dream",
+  "#s5#the<br>#s4#river",
+  "#s5#your<br>#s4#ambition",
+  "#s4#time",
+],
+    
+open2: [
   "#s25#a<br>#s24#child",
   "#s25#the<br>#s24#wind",
   "#s25#my<br>#s24#dream",
@@ -31,8 +53,21 @@ anoun2: [
   "#s25#your<br>#s24#ambition",
   "#s24#time",
 ],
+
+  
+constructs1: ["#s3#builds", "#s3#makes", "#s3#constructs"],
+
 constructs2: ["#s23#builds", "#s23#makes", "#s23#constructs"],
-structure2: [
+
+    structure1: [
+  "#s4#a<br>#s5#house",
+  "#s4#a<br>#s5#castle",
+  "#s4#a<br>#s5#ruin",
+  "#s4#a<br>#s5#village",
+  "#s4#an<br>#s5#expanse",
+],
+    
+    structure2: [
   "#s21#a<br>#s19#house",
   "#s21#a<br>#s19#castle",
   "#s21#a<br>#s19#ruin",
@@ -40,68 +75,122 @@ structure2: [
   "#s21#an<br>#s19#expanse",
 ],
 
-adjective2: [
-  "#s19#tended",
-  "#s19#wilting",
-  "#s19#distant",
-  "#s19#arid",
-  "#s19#twilight",
-  "#s19#closely-held",
-  "#s19#pale",
-  "#s19#precious",
-  "#s19#lost",
-  "#s19#growing",
-  "#s19#dying",
-  "#s19#smudged",
-  "#s19#scraped",
-  "#s19#plastic",
-  "#s19#hollow",
-  "#s19#virtual",
-  "#s19#screaming",
-  "#s19#scattered",
-  "#s19#slow",
+adjective1: [
+  "#s10##adjective#"
+  ],
+    
+  adjective2: [
+  "#s19##adjective#"
+  ],
+    
+    adjective: ["tended",
+  "wilting",
+  "distant",
+  "arid",
+  "twilight",
+  "closely-held",
+  "pale",
+  "precious",
+  "lost",
+  "growing",
+  "dying",
+  "smudged",
+  "scraped",
+  "plastic",
+  "hollow",
+  "virtual",
+  "screaming",
+  "scattered",
+  "slow",
 ],
 
-nouns2: [
-  "#s21#flowers",
-  "#s20#white<br>#s21#tulips",
-  "#s21#vectors",
-  "#s21#facades",
-  "#s21#vegetation",
-  "#s21#roots",
+
+    nouns1: [
+  "#s8##nouns#", "white<br>#s8#tulips"
 ],
+
+        nouns2: [
+  "#s21##nouns#", "white<br>#s21#tulips"
+],
+
+nouns: [
+  "flowers",
+  "tulips",
+  "vectors",
+  "facades",
+  "vegetation",
+  "roots",
+],
+
+every1: ["#s15#every", "#s15#each", "#s15#every<br>#s16#last", "#s15#all<br>#s16#but<br>#s15#one"],
+    
 every2: ["#s25#every", "#s25#each", "#s25#every<br>#s26#last", "#s25#all<br>#s26#but<br>#s25#one"],
-stone2: [
-  "#s24#stone",
-  "#s24#seed",
-  "#s24#pip",
-  "#s24#core",
-  "#s24#pebble",
-  "#s24#rock",
-  "#s24#boulder",
-  "#s24#granule",
-  "#s24#cobble",
+
+    stone1: [
+  "#s14##stone#",
+],
+        stone2: [
+  "#s24##stone#",
+],
+    
+    stone: [
+  "stone",
+  "seed",
+  "pip",
+  "core",
+  "pebble",
+  "rock",
+  "boulder",
+  "granule",
+  "cobble",
 ],
 
-abstractnoun2: [
-  "#s18#memory",
-  "#s18#shadow",
-  "#s18#regret",
-  "#s18#pride",
-  "#s18#hubris",
-  "#s18#forgiveness",
-  "#s18#hope",
+    abstractnoun1: [
+  "#s18##abstractnoun#",
 ],
-verbed2: [
-  "#s15#slithered",
-  "#s15#slid",
-  "#s15#eroded",
-  "#s15#migrated",
-  "#s15#drifted",
-  "#s15#rolled",
-  "#s15#slipped",
-  "#s15#tripped",
+
+        abstractnoun2: [
+  "#s18##abstractnoun#",
 ],
+    
+abstractnoun: [
+  "memory",
+  "shadow",
+  "regret",
+  "pride",
+  "hubris",
+  "forgiveness",
+  "hope",
+],
+
+    
+verbed1: [
+  "#s15##verbed#",
+],
+
+    verbed2: [
+  "#s15##verbed#",
+],
+    
+verbed: [
+  "slithered",
+  "slid",
+  "eroded",
+  "migrated",
+  "drifted",
+  "rolled",
+  "slipped",
+  "tripped",
+],
+
+
+collapse1: [
+  "#s18#off<br>#s19#the<br>#s20#mountainside",
+  "#s18#into<br>#s19#the<br>#s20#gully",
+  "#s18#down<br>#s19#the<br>#s20#vale",
+  "#s18#into<br>#s19#the<br>#s20#gorge",
+],
+    
 collapse2: [
   "#s18#off<br>#s19#the<br>#s20#mountainside",
   "#s18#into<br>#s19#the<br>#s20#gully",
@@ -109,6 +198,14 @@ collapse2: [
   "#s18#into<br>#s19#the<br>#s20#gorge",
 ],
 
+    soon1: [
+  "#s15#soon",
+  "#s16#one<br>#s15#day",
+  "#s15#one<br>#s17#day<br>#s16#soon",
+  "#s15#eventually",
+  "#s16#all<br>#s17#at<br>#s15#once",
+],
+    
 soon2: [
   "#s25#soon",
   "#s26#one<br>#s25#day",
@@ -116,19 +213,50 @@ soon2: [
   "#s25#eventually",
   "#s26#all<br>#s27#at<br>#s25#once",
 ],
-pronoun2: ["#s23#you", "#s23#I", "#s23#we"],
-miss2: ["#s21#miss", "#s21#crave", "#s21#desire", "#s21#need", "#s22#long<br>#s21#for", "#s22#yearn<br>#s21#for"],
+
+    pronoun1: ["#s13#you", "#s13#I", "#s13#we"],
+
+    pronoun2: ["#s23#you", "#s23#I", "#s23#we"],
+
+    
+miss1: ["#s10#miss", "#s10#crave", "#s10#desire", "#s10#need", "#s11#long<br>#s10#for", "#s11#yearn<br>#s10#for"],
+
+    miss2: ["#s21#miss", "#s21#crave", "#s21#desire", "#s21#need", "#s22#long<br>#s21#for", "#s22#yearn<br>#s21#for"],
+
+    
+seasonalnoun1: [
+  "#s13##seasonalnoun#",
+  "#s8#changing<br>#s11#of<br>#s13#seasons",
+],
+
 seasonalnoun2: [
-  "#s23#winter",
-  "#s23#spring",
-  "#s23#summer",
-  "#s23#autumn",
-  "#s23#daybreak",
-  "#s23#nightfall",
+  "#s23##seasonalnoun#",
   "#s22#changing<br>#s21#of<br>#s23#seasons",
 ],
 
+seasonalnoun2: [
+  "winter",
+  "spring",
+  "summer",
+  "autumn",
+  "daybreak",
+  "nightfall",
+],
+
+    
+etre1: ["#s18#I<br>#s17#am", "#s18#you<br>#s17#are", "#s18#we<br>#s17#are"],
 etre2: ["#s26#I<br>#s27#am", "#s26#you<br>#s27#are", "#s26#we<br>#s27#are"],
+
+   constructing1: [
+  "#s15#building",
+  "#s15#making",
+  "#s15#constructing",
+  "#s15#designing",
+  "#s15#imagining",
+  "#s16#dreaming<br>#s15#of",
+  "#s16#setting<br>#s15#up",
+],
+    
 constructing2: [
   "#s29#building",
   "#s29#making",
@@ -138,6 +266,16 @@ constructing2: [
   "#s28#dreaming<br>#s29#of",
   "#s28#setting<br>#s29#up",
 ],
+
+    
+machine1: [
+  "#s17#a<br>#s19#machine",
+  "#s17#a<br>#s19#device",
+  "#s17#an<br>#s19#approach",
+  "#s17#a<br>#s19#tool",
+  "#s17#a<br>#s19#method",
+],
+    
 machine2: [
   "#s27#a<br>#s29#machine",
   "#s27#a<br>#s29#device",
@@ -146,155 +284,32 @@ machine2: [
   "#s27#a<br>#s29#method",
 ],
 
+  
+    preplocation1: [
+  "#s21#in<br>#s22#the<br>#s24#rock<br>#s26#face",
+  "#s21#under<br>#s22#the<br>#s24#valley",
+  "#s21#inside<br>#s22#the<br>#s24#gorge",
+  "#s21#on<br>#s22#top<br>#s23#of<br>#s24#the<br>#s26#mountain",
+],
+    
 preplocation2: [
   "#s29#in<br>#s28#the<br>#s27#rock<br>#s26#face",
   "#s29#under<br>#s28#the<br>#s25#valley",
   "#s29#inside<br>#s28#the<br>#s25#gorge",
   "#s29#on<br>#s28#top<br>#s26#of<br>#s25#the<br>#s26#mountain",
 ],
+
+
+end1: ["#s27#read<br>#s29#poetry", "#s27#make<br>#s29#poetry"],
+  
+    
 end2: ["#s20#read<br>#s18#poetry", "#s20#make<br>#s18#poetry"],
     
-    
+  
 
-middlechoice1: ["#middle11#", "#middle21#"],
-middle11: [
-  "#every1#<br>#stone1#<br>#s17#of<br>#abstractnoun1#<br>#s16#has<br>#verbed1#<br>#collapse1#<br>",
-],
-middle21: [
-  "#soon1#<br>#pronoun1#<br>#s12#will<br>#miss1#<br>#s10#the<br>#adjective1#<br>#seasonalnoun1#",
-],
 
-anoun1: [
-  "#s5#a<br>#s4#child",
-  "#s5#the<br>#s4#wind",
-  "#s5#my<br>#s4#dream",
-  "#s5#the<br>#s4#river",
-  "#s5#your<br>#s4#ambition",
-  "#s4#time",
-],
-constructs1: ["#s3#builds", "#s3#makes", "#s3#constructs"],
-structure1: [
-  "#s4#a<br>#s5#house",
-  "#s4#a<br>#s5#castle",
-  "#s4#a<br>#s5#ruin",
-  "#s4#a<br>#s5#village",
-  "#s4#an<br>#s5#expanse",
-],
 
-adjective1: [
-  "#s10#tended",
-  "#s10#wilting",
-  "#s10#distant",
-  "#s10#arid",
-  "#s10#twilight",
-  "#s10#closely-held",
-  "#s10#pale",
-  "#s10#precious",
-  "#s10#lost",
-  "#s10#growing",
-  "#s10#dying",
-  "#s10#smudged",
-  "#s10#scraped",
-  "#s10#plastic",
-  "#s10#hollow",
-  "#s10#virtual",
-  "#s10#screaming",
-  "#s10#scattered",
-  "#s10#slow",
-],
-
-nouns1: [
-  "#s8#flowers",
-  "#s8#white<br>#s8#tulips",
-  "#s8#vectors",
-  "#s8#facades",
-  "#s8#vegetation",
-  "#s8#roots",
-],
-every1: ["#s15#every", "#s15#each", "#s15#every<br>#s16#last", "#s15#all<br>#s16#but<br>#s15#one"],
-stone1: [
-  "#s14#stone",
-  "#s14#seed",
-  "#s14#pip",
-  "#s14#core",
-  "#s14#pebble",
-  "#s14#rock",
-  "#s14#boulder",
-  "#s14#granule",
-  "#s14#cobble",
-],
-
-abstractnoun1: [
-  "#s18#memory",
-  "#s18#shadow",
-  "#s18#regret",
-  "#s18#pride",
-  "#s18#hubris",
-  "#s18#forgiveness",
-  "#s18#hope",
-],
-verbed1: [
-  "#s15#slithered",
-  "#s15#slid",
-  "#s15#eroded",
-  "#s15#migrated",
-  "#s15#drifted",
-  "#s15#rolled",
-  "#s15#slipped",
-  "#s15#tripped",
-],
-collapse1: [
-  "#s18#off<br>#s19#the<br>#s20#mountainside",
-  "#s18#into<br>#s19#the<br>#s20#gully",
-  "#s18#down<br>#s19#the<br>#s20#vale",
-  "#s18#into<br>#s19#the<br>#s20#gorge",
-],
-
-soon1: [
-  "#s15#soon",
-  "#s16#one<br>#s15#day",
-  "#s15#one<br>#s17#day<br>#s16#soon",
-  "#s15#eventually",
-  "#s16#all<br>#s17#at<br>#s15#once",
-],
-pronoun1: ["#s13#you", "#s13#I", "#s13#we"],
-miss1: ["#s10#miss", "#s10#crave", "#s10#desire", "#s10#need", "#s11#long<br>#s10#for", "#s11#yearn<br>#s10#for"],
-seasonalnoun1: [
-  "#s13#winter",
-  "#s13#spring",
-  "#s13#summer",
-  "#s13#autumn",
-  "#s13#daybreak",
-  "#s13#nightfall",
-  "#s8#changing<br>#s11#of<br>#s13#seasons",
-],
-
-etre1: ["#s18#I<br>#s17#am", "#s18#you<br>#s17#are", "#s18#we<br>#s17#are"],
-constructing1: [
-  "#s15#building",
-  "#s15#making",
-  "#s15#constructing",
-  "#s15#designing",
-  "#s15#imagining",
-  "#s16#dreaming<br>#s15#of",
-  "#s16#setting<br>#s15#up",
-],
-machine1: [
-  "#s17#a<br>#s19#machine",
-  "#s17#a<br>#s19#device",
-  "#s17#an<br>#s19#approach",
-  "#s17#a<br>#s19#tool",
-  "#s17#a<br>#s19#method",
-],
-
-preplocation1: [
-  "#s21#in<br>#s22#the<br>#s24#rock<br>#s26#face",
-  "#s21#under<br>#s22#the<br>#s24#valley",
-  "#s21#inside<br>#s22#the<br>#s24#gorge",
-  "#s21#on<br>#s22#top<br>#s23#of<br>#s24#the<br>#s26#mountain",
-],
-end1: ["#s27#read<br>#s29#poetry", "#s27#make<br>#s29#poetry"],
-    
+  
     
     s1: ["\u2003"],
     s2: ["\u2003\u2003"],
